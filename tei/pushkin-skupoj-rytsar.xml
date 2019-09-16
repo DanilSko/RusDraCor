@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="../css/tei.css"?>
+<?xml-model href="https://dracor.org/schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> 
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="ru">
   <teiHeader>
     <fileDesc>
@@ -10,28 +11,25 @@
           Knight)</title>
         <title type="sub" xml:lang="en">(Scenes from Shenstone's Tragicomedy: The Covetous
           Knight)</title>
-        <author key="Wikidata:Q7200">Пушкин, Александр Сергеевич</author>
+        <author key="wikidata:Q7200">Пушкин, Александр Сергеевич</author>
       </titleStmt>
       <publicationStmt>
-        <publisher xml:id="RusDraCor">RusDraCor</publisher>
-        <idno type="URL">https://dracor.org/rus/pushkin-skupoj-rytsar</idno>
-        <idno type="RusDraCor">17</idno>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="dracor" xml:base="https://dracor.org/id/">rus000017</idno>
         <availability>
           <licence>
-            <ab>CC BY 4.0</ab>
-            <ref target="https://creativecommons.org/licenses/by/4.0/legalcode">Licence</ref>
+            <ab>CC0 1.0</ab>
+            <ref target="https://creativecommons.org/publicdomain/zero/1.0/">Licence</ref>
           </licence>
         </availability>
+        <idno type="wikidata" xml:base="https://www.wikidata.org/entity/">Q3221232</idno>
       </publicationStmt>
       <sourceDesc>
         <bibl type="digitalSource">
           <name>Интернет-библиотека Алексея Комарова</name>
           <idno type="URL">http://ilibrary.ru/text/466/index.html</idno>
-          <availability>
-            <licence>
-              <ab>CC BY-SA 3.0</ab>
-              <ref target="https://creativecommons.org/licenses/by-sa/3.0/deed.ru">Licence</ref>
-            </licence>
+          <availability status="free">
+            <p>In the public domain.</p>
           </availability>
           <bibl type="originalSource">
             <title>А.С. Пушкин. Собрание сочинений в 10 томах. Том 4. Государственное издательство
@@ -73,11 +71,11 @@
     </profileDesc>
     <revisionDesc>
       <listChange>
-        <change who="#ds">converted from source</change>
-        <change who="#ds" when="2017-05-23">removed 'unknown speaker'</change>
-        <change who="#ff" when="2017-06-06">marked-up shared verses with part attribute; added scene
+        <change>(ds) convert from source</change>
+        <change when="2017-05-23">(ds) remove 'unknown speaker'</change>
+        <change when="2017-06-06">(ff) markup shared verses with part attribute; add scene
           segmentation and some missing stage directions</change>
-        <change who="#gg" when="2017-06-06">gender info</change>
+        <change when="2017-06-06">(gg) gender info</change>
       </listChange>
     </revisionDesc>
   </teiHeader>
@@ -998,7 +996,7 @@
         </sp>
         <sp who="#Gertsog">
           <speaker>Герцог</speaker>
-          <stage type="delivery">(сыну)</stage>
+          <stage>(сыну)</stage>
           <lg>
             <l part="I">Как смели вы?..</l>
           </lg>
@@ -1025,7 +1023,7 @@
             <l>Так подыми ж, и меч нас рассуди!</l>
           </lg>
         </sp>
-        <stage type="delivery">(Бросает перчатку, сын поспешно ее подымает.)</stage>
+        <stage>(Бросает перчатку, сын поспешно ее подымает.)</stage>
         <sp who="#Alber">
           <speaker>Альбер</speaker>
           <lg>
@@ -1039,14 +1037,14 @@
             <l>Сын принял вызов старого отца!</l>
             <l>В какие дни надел я на себя</l>
             <l>Цепь герцогов! Молчите: ты, безумец,</l>
-            <l>И ты, тигренок! полно. <stage type="delivery">(Сыну.)</stage> Бросьте это;</l>
+            <l>И ты, тигренок! полно. <stage>(Сыну.)</stage> Бросьте это;</l>
             <l part="I">Отдайте мне перчатку эту</l>
           </lg>
         </sp>
-        <stage type="delivery">(отымает ее).</stage>
+        <stage>(отымает ее).</stage>
         <sp who="#Alber">
           <speaker>Альбер</speaker>
-          <stage type="delivery">(a parte)</stage>
+          <stage>(a parte)</stage>
           <lg>
             <l part="F">Жаль.</l>
           </lg>

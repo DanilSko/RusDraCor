@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="../css/tei.css"?>
+<?xml-model href="https://dracor.org/schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> 
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="ru">
   <teiHeader>
     <fileDesc>
@@ -8,28 +9,25 @@
         <title type="main" xml:lang="en">A Feast in Time of Plague</title>
         <title type="sub" xml:lang="ru">(Из вильсоновой трагедии: The city of the plague)</title>
         <title type="sub" xml:lang="en">(From Wilson's Tragedy: The City of the Plague)</title>
-        <author key="Wikidata:Q7200">Пушкин, Александр Сергеевич</author>
+        <author key="wikidata:Q7200">Пушкин, Александр Сергеевич</author>
       </titleStmt>
       <publicationStmt>
-        <publisher xml:id="RusDraCor">RusDraCor</publisher>
-        <idno type="URL">https://dracor.org/rus/pushkin-pir-vo-vremja-chumy</idno>
-        <idno type="RusDraCor">19</idno>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="dracor" xml:base="https://dracor.org/id/">rus000019</idno>
         <availability>
           <licence>
-            <ab>CC BY 4.0</ab>
-            <ref target="https://creativecommons.org/licenses/by/4.0/legalcode">Licence</ref>
+            <ab>CC0 1.0</ab>
+            <ref target="https://creativecommons.org/publicdomain/zero/1.0/">Licence</ref>
           </licence>
         </availability>
+        <idno type="wikidata" xml:base="https://www.wikidata.org/entity/">Q4363241</idno>
       </publicationStmt>
       <sourceDesc>
         <bibl type="digitalSource">
           <name>Интернет-библиотека Алексея Комарова</name>
           <idno type="URL">http://ilibrary.ru/text/469/index.html</idno>
-          <availability>
-            <licence>
-              <ab>CC BY-SA 3.0</ab>
-              <ref target="https://creativecommons.org/licenses/by-sa/3.0/deed.ru">Licence</ref>
-            </licence>
+          <availability status="free">
+            <p>In the public domain.</p>
           </availability>
           <bibl type="originalSource">
             <title>А.С. Пушкин. Собрание сочинений в 10 томах. Том 4. Государственное издательство
@@ -57,9 +55,9 @@
           <person xml:id="Luiza" sex="FEMALE">
             <persName>Луиза</persName>
           </person>
-          <person xml:id="Mnogie" sex="UNKNOWN">
-            <persName>Многие</persName>
-          </person>
+          <personGrp xml:id="Mnogie" sex="UNKNOWN">
+            <name>Многие</name>
+          </personGrp>
           <person xml:id="Svjaschennik" sex="MALE">
             <persName>Священник</persName>
           </person>
@@ -76,13 +74,14 @@
     </profileDesc>
     <revisionDesc>
       <listChange>
-        <change who="#ds" when="2017-05-08">initial upload</change>
-        <change who="#zhenya" when="2017-05-25">changed ids, added date</change>
-        <change who="#GG" when="2017-06-03">gender info</change>
-        <change who="#ff" when="2017-06-05">connected continued verses with part attribute;
-          formatted front page; configuration changes</change>
-        <change who="#ff" when="2017-06-26">connected continued verses with part attribute;
-          formatted front page; configuration changes</change>
+        <change when="2017-05-08">(ds) initial upload</change>
+        <change when="2017-05-25">(zh) change ids, add date</change>
+        <change when="2017-06-03">(gg) gender info</change>
+        <change when="2017-06-05">(ff) connect continued verses with part attribute; format front
+          page; configuration changes</change>
+        <change when="2017-06-26">(ff) connected continued verses with part attribute; formatted
+          front page; configuration changes</change>
+        <change when="2018-04-07">(zh) group tag</change>
       </listChange>
     </revisionDesc>
   </teiHeader>

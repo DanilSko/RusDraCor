@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="../css/tei.css"?>
+<?xml-model href="https://dracor.org/schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> 
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="ru">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title xml:lang="ru">Моцарт и Сальери</title>
-        <title xml:lang="en">Mozart and Salieri</title>
-        <title type="sub"/>
-        <author key="Wikidata:Q7200">Пушкин, Александр Сергеевич</author>
+        <title type="main" xml:lang="ru">Моцарт и Сальери</title>
+        <title type="main" xml:lang="en">Mozart and Salieri</title>
+        <title type="sub" xml:lang="ru">–</title>
+        <title type="sub" xml:lang="en">–</title>
+        <author key="wikidata:Q7200">Пушкин, Александр Сергеевич</author>
       </titleStmt>
       <publicationStmt>
-        <publisher xml:id="RusDraCor">RusDraCor</publisher>
-        <idno type="URL">https://dracor.org/rus/pushkin-mocart-i-saleri</idno>
-        <idno type="RusDraCor">20</idno>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="dracor" xml:base="https://dracor.org/id/">rus000020</idno>
         <availability>
           <licence>
-            <ab>CC BY 4.0</ab>
-            <ref target="https://creativecommons.org/licenses/by/4.0/legalcode">Licence</ref>
+            <ab>CC0 1.0</ab>
+            <ref target="https://creativecommons.org/publicdomain/zero/1.0/">Licence</ref>
           </licence>
         </availability>
+        <idno type="wikidata" xml:base="https://www.wikidata.org/entity/">Q4305148</idno>
       </publicationStmt>
       <sourceDesc>
         <bibl type="digitalSource">
@@ -65,8 +67,8 @@
     </profileDesc>
     <revisionDesc>
       <listChange>
-        <change who="#ff" when="2016-12-16">converted from source</change>
-        <change who="#ff" when="2017-06-12">formalities</change>
+        <change when="2016-12-16">(ff) convert from source</change>
+        <change when="2017-06-12">(ff) formalities</change>
       </listChange>
     </revisionDesc>
   </teiHeader>

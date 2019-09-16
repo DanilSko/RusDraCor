@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="../css/tei.css"?>
+<?xml-model href="https://dracor.org/schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> 
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="ru">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title type="main" xml:lang="ru">Дитя Аллаха</title>
         <title type="main" xml:lang="en">The Child of Allah</title>
-        <title type="sub"/>
-        <author key="Wikidata:Q311033">Гумилёв, Николай Степанович</author>
+        <title type="sub" xml:lang="ru">–</title>
+        <title type="sub" xml:lang="en">–</title>
+        <author key="wikidata:Q311033">Гумилёв, Николай Степанович</author>
       </titleStmt>
       <publicationStmt>
-        <publisher xml:id="RusDraCor">RusDraCor</publisher>
-        <idno type="URL">https://dracor.org/rus/gumilyov-ditja-allaha</idno>
-        <idno type="RusDraCor">45</idno>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="dracor" xml:base="https://dracor.org/id/">rus000045</idno>
         <availability>
           <licence>
-            <ab>CC BY 4.0</ab>
-            <ref target="https://creativecommons.org/licenses/by/4.0/legalcode">Licence</ref>
+            <ab>CC0 1.0</ab>
+            <ref target="https://creativecommons.org/publicdomain/zero/1.0/">Licence</ref>
           </licence>
         </availability>
+        <idno type="wikidata" xml:base="https://www.wikidata.org/entity/">Q19153895</idno>
       </publicationStmt>
       <sourceDesc>
         <bibl type="digitalSource">
@@ -31,7 +33,7 @@
             </licence>
           </availability>
           <bibl type="originalSource">
-            <title/>
+            <title>Собрание сочинений в четырех томах (https://gumilev.ru/biblio/31/)</title>
             <date type="print" when="1917">"1917 году, пьеса была опубликована на страницах
               «Аполлона» (№ 6-7)." (Wikipedia)</date>
             <date type="premiere" when="1922">"Первым появлением пьесы на сцене можно считать
@@ -99,9 +101,9 @@
           <person xml:id="Gafiz" sex="MALE">
             <persName>Гафиз</persName>
           </person>
-          <person xml:id="Ptitsy" sex="UNKNOWN">
-            <persName>Птицы</persName>
-          </person>
+          <personGrp xml:id="Ptitsy" sex="UNKNOWN">
+            <name>Птицы</name>
+          </personGrp>
           <person xml:id="Angel" sex="UNKNOWN">
             <persName>Ангел</persName>
           </person>
@@ -115,9 +117,10 @@
     </profileDesc>
     <revisionDesc>
       <listChange>
-        <change who="#IrinaPavlova" when="2017-04-13">convert from source</change>
-        <change who="#ff" when="2017-04-14">establish well-formedness</change>
-        <change who="#ff" when="2017-07-07">connect lines via 'part' attribute</change>
+        <change when="2017-04-13">(ip) convert from source</change>
+        <change when="2017-04-14">(ff) establish well-formedness</change>
+        <change when="2017-07-07">(ff) connect lines via 'part' attribute</change>
+        <change when="2018-04-07">(zh) group tag</change>
       </listChange>
     </revisionDesc>
   </teiHeader>
@@ -133,7 +136,7 @@
         <stage>Пустыня. Закат солнца.</stage>
         <sp who="#Dervish">
           <speaker>Дервиш</speaker>
-          <stage type="delivery">(молится)</stage>
+          <stage>(молится)</stage>
           <l>Благословен Аллах, создавший</l>
           <l>Солнцеворот с зимой и летом</l>
           <l>И в мраке ночи указавший</l>
@@ -153,7 +156,7 @@
         </sp>
         <sp who="#Peri">
           <speaker>Пери</speaker>
-          <stage type="delivery">(входит)</stage>
+          <stage>(входит)</stage>
           <l>Ты — дервиш, первый в нашей вере?</l>
           <l>Ты сыплешь мудрость, как цветы?</l>
         </sp>
@@ -327,7 +330,7 @@
         </sp>
         <sp who="#Junosha">
           <speaker>Юноша</speaker>
-          <stage type="delivery">(умирая)</stage>
+          <stage>(умирая)</stage>
           <l>Жестокая, я умираю!</l>
           <l>И странный звон, и всё в огне…</l>
           <l>Уйди, тебя я проклинаю!</l>
@@ -359,7 +362,7 @@
         </sp>
         <sp who="#Peri">
           <speaker>Пери</speaker>
-          <stage type="delivery">(про себя)</stage>
+          <stage>(про себя)</stage>
           <l>Быть может, он меня достоин:</l>
           <l>Он горд, отважен и силён.</l>
         </sp>
@@ -612,7 +615,7 @@
         </sp>
         <sp who="#Dervish">
           <speaker>Дервиш</speaker>
-          <stage type="delivery">(входя)</stage>
+          <stage>(входя)</stage>
           <l>Вставай, иди за мной без страна,</l>
           <l>Ты всё поймёшь и всё найдёшь.</l>
         </sp>
@@ -665,7 +668,7 @@
         </sp>
         <sp who="#Dervish">
           <speaker>Дервиш</speaker>
-          <stage type="delivery">(старухе)</stage>
+          <stage>(старухе)</stage>
           <l>О, госпожа моя, слетела</l>
           <l>Печаль на блеск твоих седин,</l>
           <l part="I">Как птица хищная.</l>
@@ -745,7 +748,7 @@
         </sp>
         <sp who="#Kadi">
           <speaker>Кади</speaker>
-          <stage type="delivery">(отступая)</stage>
+          <stage>(отступая)</stage>
           <l>О нет! Я много перенёс.</l>
         </sp>
         <sp who="#Staruha">
@@ -754,7 +757,7 @@
         </sp>
         <sp who="#Kadi">
           <speaker>Кади</speaker>
-          <stage type="delivery">(отступая)</stage>
+          <stage>(отступая)</stage>
           <l>Мой нос — обыкновенный нос.</l>
         </sp>
         <sp who="#Staruha">
@@ -763,7 +766,7 @@
         </sp>
         <sp who="#Kadi">
           <speaker>Кади</speaker>
-          <stage type="delivery">(отступая)</stage>
+          <stage>(отступая)</stage>
           <l part="F">Была когда-то.</l>
         </sp>
         <sp who="#Staruha">
@@ -772,7 +775,7 @@
         </sp>
         <sp who="#Kadi">
           <speaker>Кади</speaker>
-          <stage type="delivery">(отступая)</stage>
+          <stage>(отступая)</stage>
           <l part="F">Бог с ним!</l>
         </sp>
         <sp who="#Staruha">
@@ -781,7 +784,7 @@
         </sp>
         <sp who="#Kadi">
           <speaker>Кади</speaker>
-          <stage type="delivery">(останавливается)</stage>
+          <stage>(останавливается)</stage>
           <l>Мы после переговорим.</l>
         </sp>
         <sp who="#Dervish">
@@ -1319,7 +1322,7 @@
         </sp>
         <sp who="#Gafiz">
           <speaker>Гафиз</speaker>
-          <stage type="delivery">(оборачивается)</stage>
+          <stage>(оборачивается)</stage>
           <l>Входите и садитесь оба.</l>
           <l>Ты плачешь, девушка? О чём?</l>
           <l>В саду Гафиза слёз не надо,</l>
@@ -1357,7 +1360,7 @@
         </sp>
         <sp who="#Gafiz">
           <speaker>Гафиз</speaker>
-          <stage type="delivery">(читает заклинание)</stage>
+          <stage>(читает заклинание)</stage>
           <l>Крыло лучей, в стекло ночей</l>
           <l>Ударь, ударь, стекло, разбейся!</l>
           <l>Алмазный свет, сапфирный свет</l>
@@ -1398,7 +1401,7 @@
         </sp>
         <sp who="#Gafiz">
           <speaker>Гафиз</speaker>
-          <stage type="delivery">(указывая на пери)</stage>
+          <stage>(указывая на пери)</stage>
           <l>Скажи, о ней жалеешь ты?</l>
         </sp>
         <sp who="#Junosha">
@@ -1445,7 +1448,7 @@
         </sp>
         <sp who="#Gafiz">
           <speaker>Гафиз</speaker>
-          <stage type="delivery">(читает заклинание)</stage>
+          <stage>(читает заклинание)</stage>
           <l>Пади расплавленным свинцом,</l>
           <l>Моя отточенная воля,</l>
           <l>В страну, забытую Творцом,</l>
@@ -1522,7 +1525,7 @@
         </sp>
         <sp who="#Gafiz">
           <speaker>Гафиз</speaker>
-          <stage type="delivery">(читает заклинание)</stage>
+          <stage>(читает заклинание)</stage>
           <l>Живое слово, устремись</l>
           <l>Туда, где зарожденье слова,</l>
           <l>Ни внутрь, ни вглубь, ни вширь, а ввысь,</l>
@@ -1603,7 +1606,7 @@
         </sp>
         <sp who="#Peri">
           <speaker>Пери</speaker>
-          <stage type="delivery">(поет)</stage>
+          <stage>(поет)</stage>
           <l>Зачем печально так поёт Гафиз?</l>
           <l>Иль даром мудрецом слывёт Гафиз?</l>
           <l>Какую девушку не опьянит</l>
@@ -1665,7 +1668,7 @@
         </sp>
         <sp who="#Gafiz">
           <speaker>Гафиз</speaker>
-          <stage type="delivery">(к Пери)</stage>
+          <stage>(к Пери)</stage>
           <l>Ты словно слиток золотой,</l>
           <l>Расплавленный в шумящих горнах,</l>
           <l>И грудь под лёгкой пеленой</l>

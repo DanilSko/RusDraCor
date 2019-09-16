@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="../css/tei.css"?>
+<?xml-model href="https://dracor.org/schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> 
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="ru">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title type="main" xml:lang="ru">Русалка</title>
         <title type="main" xml:lang="en">The Mermaid</title>
-        <title type="sub"/>
-        <author key="Wikidata:Q7200">Пушкин, Александр Сергеевич</author>
+        <title type="sub" xml:lang="ru">–</title>
+        <title type="sub" xml:lang="en">–</title>
+        <author key="wikidata:Q7200">Пушкин, Александр Сергеевич</author>
       </titleStmt>
       <publicationStmt>
-        <publisher xml:id="RusDraCor">RusDraCor</publisher>
-        <idno type="URL">https://dracor.org/rus/pushkin-rusalka</idno>
-        <idno type="RusDraCor">18</idno>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="dracor" xml:base="https://dracor.org/id/">rus000018</idno>
         <availability>
           <licence>
-            <ab>CC BY 4.0</ab>
-            <ref target="https://creativecommons.org/licenses/by/4.0/legalcode">Licence</ref>
+            <ab>CC0 1.0</ab>
+            <ref target="https://creativecommons.org/publicdomain/zero/1.0/">Licence</ref>
           </licence>
         </availability>
+        <idno type="wikidata" xml:base="https://www.wikidata.org/entity/">Q3212466</idno>
       </publicationStmt>
       <sourceDesc>
         <bibl type="digitalSource">
           <name>Интернет-библиотека Алексея Комарова</name>
           <idno type="URL">http://ilibrary.ru/text/470/index.html</idno>
-          <availability>
-            <licence>
-              <ab>CC BY-SA 3.0</ab>
-              <ref target="https://creativecommons.org/licenses/by-sa/3.0/deed.ru">Licence</ref>
-            </licence>
+          <availability status="free">
+            <p>In the public domain.</p>
           </availability>
           <bibl type="originalSource">
             <title>А.С. Пушкин. Собрание сочинений в 10 томах. Том 4. Государственное издательство
@@ -45,58 +44,58 @@
     <profileDesc>
       <particDesc>
         <listPerson>
-          <person xml:id="Melnik" sex="MALE">
+          <person xml:id="melnik" sex="MALE">
             <persName>Мельник</persName>
           </person>
-          <person xml:id="DochRusalka" sex="FEMALE">
+          <person xml:id="doch_rusalka" sex="FEMALE">
             <persName>Дочь (Русалка)</persName>
           </person>
-          <person xml:id="Knjaz" sex="MALE">
+          <person xml:id="knjaz" sex="MALE">
             <persName>Князь</persName>
           </person>
-          <person xml:id="Svat" sex="MALE">
+          <person xml:id="svat" sex="MALE">
             <persName>Сват</persName>
           </person>
-          <person xml:id="Hor" sex="FEMALE">
-            <persName>Хор</persName>
-          </person>
-          <person xml:id="OdinGolos" sex="FEMALE">
+          <personGrp xml:id="hor" sex="FEMALE">
+            <name>Хор</name>
+          </personGrp>
+          <person xml:id="odin_golos" sex="FEMALE">
             <persName>Один голос</persName>
           </person>
-          <person xml:id="Devushki" sex="FEMALE">
-            <persName>Девушки</persName>
-          </person>
-          <person xml:id="Konjushij" sex="MALE">
+          <personGrp xml:id="devushki" sex="FEMALE">
+            <name>Девушки</name>
+          </personGrp>
+          <person xml:id="konjushij" sex="MALE">
             <persName>Конюший</persName>
           </person>
-          <person xml:id="Gost" sex="MALE">
+          <person xml:id="gost" sex="MALE">
             <persName>Гость</persName>
           </person>
-          <person xml:id="Druzhko" sex="MALE">
+          <person xml:id="druzhko" sex="MALE">
             <persName>Дружко</persName>
           </person>
-          <person xml:id="Svaha" sex="FEMALE">
+          <person xml:id="svaha" sex="FEMALE">
             <persName>Сваха</persName>
           </person>
-          <person xml:id="Knjaginja" sex="FEMALE">
+          <person xml:id="knjaginja" sex="FEMALE">
             <persName>Княгиня</persName>
           </person>
-          <person xml:id="Mamka" sex="FEMALE">
+          <person xml:id="mamka" sex="FEMALE">
             <persName>Мамка</persName>
           </person>
-          <person xml:id="Lovchij" sex="MALE">
+          <person xml:id="lovchij" sex="MALE">
             <persName>Ловчий</persName>
           </person>
-          <person xml:id="Odna" sex="FEMALE">
+          <person xml:id="odna" sex="FEMALE">
             <persName>Одна</persName>
           </person>
-          <person xml:id="Drugaja" sex="FEMALE">
+          <person xml:id="drugaja" sex="FEMALE">
             <persName>Другая</persName>
           </person>
-          <person xml:id="Rusalki" sex="FEMALE">
-            <persName>Русалки</persName>
-          </person>
-          <person xml:id="Rusalochka" sex="FEMALE">
+          <personGrp xml:id="rusalki" sex="FEMALE">
+            <name>Русалки</name>
+          </personGrp>
+          <person xml:id="rusalochka" sex="FEMALE">
             <persName>Дочь</persName>
           </person>
         </listPerson>
@@ -109,12 +108,13 @@
     </profileDesc>
     <revisionDesc>
       <listChange>
-        <change who="#ds" when="2017-05-15">initial commit</change>
-        <change who="#zhenya" when="2017-05-16">corrected IDs and added dates</change>
-        <change who="#ds" when="2017-05-23">removed 'unknown speaker'</change>
-        <change who="#GG" when="2017-06-03">gender info</change>
-        <change who="#ff" when="2017-06-26">marked-up shared verses with part attribute; shifted
-          some stage directions to their right place</change>
+        <change when="2017-05-15">(ds) initial commit</change>
+        <change when="2017-05-16">(zh) correct IDs and add dates</change>
+        <change when="2017-05-23">(ds) remove 'unknown speaker'</change>
+        <change when="2017-06-03">(gg) gender info</change>
+        <change when="2017-06-26">(ff) markup shared verses with part attribute; shift some stage
+          directions to their right place</change>
+        <change when="2018-04-07">(zh) group tag</change>
       </listChange>
     </revisionDesc>
   </teiHeader>
@@ -123,7 +123,7 @@
       <div type="scene">
         <head>БЕРЕГ ДНЕПРА. МЕЛЬНИЦА</head>
         <stage>Мельник, дочь его.</stage>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Мельник</speaker>
           <lg>
             <l>Ох, то-то все вы, девки молодые,</l>
@@ -159,14 +159,14 @@
             <l part="I">Чего уж не воротишь.</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Дочь</speaker>
           <lg>
             <l part="F">Почему же</l>
             <l>Ты думаешь, что бросил он меня?</l>
           </lg>
         </sp>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Мельник</speaker>
           <lg>
             <l>Как почему? да сколько раз, бывало,</l>
@@ -177,7 +177,7 @@
             <l>Как не видали мы его. Что скажешь?</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Дочь</speaker>
           <lg>
             <l>Он занят; мало ль у него заботы?</l>
@@ -186,7 +186,7 @@
             <l>Что всех трудов его труды тяжеле.</l>
           </lg>
         </sp>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Мельник</speaker>
           <lg>
             <l>Да, верь ему. Когда князья трудятся,</l>
@@ -202,47 +202,47 @@
             <l>Хоть несколько деньжонок, было б лучше.</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Дочь</speaker>
           <lg>
             <l part="I">Ах!</l>
           </lg>
         </sp>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Мельник</speaker>
           <lg>
             <l part="M">Что такое?</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Дочь</speaker>
           <lg>
             <l part="F">Чу! Я слышу топот</l>
             <l part="I">Его коня... Он, он!</l>
           </lg>
         </sp>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Мельник</speaker>
           <lg>
             <l part="F">Смотри же, дочь,</l>
             <l>Не забывай моих советов, помни...</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Дочь</speaker>
           <lg>
             <l part="I">Вот он, вот он!</l>
           </lg>
         </sp>
         <stage>Входит князь. Конюший уводит его коня.</stage>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l part="F">Здорово, милый друг.</l>
             <l part="I">Здорово, мельник.</l>
           </lg>
         </sp>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Мельник</speaker>
           <lg>
             <l part="F">Милостивый князь,</l>
@@ -251,8 +251,8 @@
             <l>Пойду тебе готовить угощенье.</l>
           </lg>
         </sp>
-        <stage type="delivery">(Уходит.)</stage>
-        <sp who="#DochRusalka">
+        <stage>(Уходит.)</stage>
+        <sp who="#doch_rusalka">
           <speaker>Дочь</speaker>
           <lg>
             <l>Ах, наконец ты вспомнил обо мне!</l>
@@ -269,21 +269,21 @@
             <l part="I">Не правда ли?</l>
           </lg>
         </sp>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l part="F">По-прежнему, мой ангел,</l>
             <l part="I">Нет, больше прежнего.</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Любовница</speaker>
           <lg>
             <l part="F">Однако ты</l>
             <l part="I">Печален; что с тобою?</l>
           </lg>
         </sp>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l part="F">Я печален?</l>
@@ -291,7 +291,7 @@
             <l part="I">Всегда, когда тебя лишь вижу.</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Она</speaker>
           <lg>
             <l part="F">Нет.</l>
@@ -306,7 +306,7 @@
             <l>Уж на меня не сердишься ли ты?</l>
           </lg>
         </sp>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l>Я не хочу притворствовать напрасно.</l>
@@ -316,7 +316,7 @@
             <l>Ни облегчить, ни даже разделить.</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Она</speaker>
           <lg>
             <l>Но больно мне с тобою не грустить</l>
@@ -325,7 +325,7 @@
             <l>Ни слезкой я тебе не досажу.</l>
           </lg>
         </sp>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l>Зачем мне медлить? чем скорей, тем лучше.</l>
@@ -342,7 +342,7 @@
             <l>Ничто на свете мне не заменит.</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Она</speaker>
           <lg>
             <l>Я слов твоих еще не понимаю,</l>
@@ -351,14 +351,14 @@
             <l part="I">Разлуку, может быть.</l>
           </lg>
         </sp>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l part="F">Ты угадала.</l>
             <l>Разлука нам судьбою суждена.</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Она</speaker>
           <lg>
             <l>Кто нас разлучит? разве за тобою</l>
@@ -371,7 +371,7 @@
             <l>Или со мной пустую шутку шутишь.</l>
           </lg>
         </sp>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l>Нет, шутки мне на ум нейдут сегодня,</l>
@@ -381,7 +381,7 @@
             <l>Но должен я с тобой навек проститься.</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Она</speaker>
           <lg>
             <l>Постой, теперь я понимаю все...</l>
@@ -392,7 +392,7 @@
             <l part="M">Ты женишься!..</l>
           </lg>
         </sp>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l part="F">Что делать?</l>
@@ -407,25 +407,25 @@
             <l>Возьми его. Да вот еще: отцу</l>
             <l>Я это посулил. Отдай ему.</l>
           </lg>
-          <stage type="delivery"> (Дает ей в руки мешок с золотом.)</stage>
+          <stage> (Дает ей в руки мешок с золотом.)</stage>
           <lg>
             <l part="I">Прощай.</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Она</speaker>
           <lg>
             <l part="F">Постой; тебе сказать должна я</l>
             <l part="I">Не помню что.</l>
           </lg>
         </sp>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l part="M">Припомни.</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Она</speaker>
           <lg>
             <l part="F">Для тебя</l>
@@ -436,7 +436,7 @@
             <l>Ребенок твой под сердцем шевельнулся.</l>
           </lg>
         </sp>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l>Несчастная! как быть? хоть для него</l>
@@ -446,18 +446,18 @@
             <l>Вас навестить. Утешься, не крушися.</l>
             <l>Дай обниму тебя в последний раз.</l>
           </lg>
-          <stage type="delivery">(Уходя.)</stage>
+          <stage>(Уходя.)</stage>
           <lg>
             <l>Ух! кончено — душе как будто легче.</l>
             <l>Я бури ждал, но дело обошлось</l>
             <l part="I">Довольно тихо.</l>
           </lg>
         </sp>
-        <stage type="delivery">(Уходит.)</stage>
+        <stage>(Уходит.)</stage>
         <stage>Она остается неподвижною.</stage>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Мельник</speaker>
-          <stage type="delivery">(входит)</stage>
+          <stage>(входит)</stage>
           <lg>
             <l part="F">Не угодно ль будет</l>
             <l>Пожаловать на мельницу... да где ж он?</l>
@@ -472,7 +472,7 @@
             <l part="I">Иль на тебя столбняк нашел?</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Дочь</speaker>
           <lg>
             <l part="F">Не верю,</l>
@@ -481,13 +481,13 @@
             <l part="I">Косматое?</l>
           </lg>
         </sp>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Мельник</speaker>
           <lg>
             <l part="F">О ком ты говоришь?</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Дочь</speaker>
           <lg>
             <l>Скажи, родимый, как могла его</l>
@@ -496,13 +496,13 @@
             <l part="I">Отравой опоили?</l>
           </lg>
         </sp>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Мельник</speaker>
           <lg>
             <l part="F">Что с тобою?</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Дочь</speaker>
           <lg>
             <l>Родимый, он уехал. Вон он скачет! —</l>
@@ -514,13 +514,13 @@
             <l>Он растоптал меня своим конем!</l>
           </lg>
         </sp>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Мельник</speaker>
           <lg>
             <l part="I">Ты бредишь!</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Дочь</speaker>
           <lg>
             <l part="F">Видишь ли, князья не вольны,</l>
@@ -539,13 +539,13 @@
             <l part="I">Люби, кого замыслишь.</l>
           </lg>
         </sp>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Мельник</speaker>
           <lg>
             <l part="F">Вот в чем дело.</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Дочь</speaker>
           <lg>
             <l>Да кто ж его невеста? на кого</l>
@@ -555,7 +555,7 @@
             <l part="I">Не водятся в одном овраге.</l>
           </lg>
         </sp>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Мельник</speaker>
           <lg>
             <l part="F">Дура!</l>
@@ -564,7 +564,7 @@
             <l part="I">Не говорил ли я тебе...</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Дочь</speaker>
           <lg>
             <l part="F">И мог он,</l>
@@ -582,10 +582,10 @@
             <l part="I">Моя погибель.</l>
           </lg>
         </sp>
-        <stage type="delivery">(Отдает ему мешок.)</stage>
-        <sp who="#Melnik">
+        <stage>(Отдает ему мешок.)</stage>
+        <sp who="#melnik">
           <speaker>Отец</speaker>
-          <stage type="delivery">(в слезах)</stage>
+          <stage>(в слезах)</stage>
           <lg>
             <l part="F">До чего я дожил!</l>
             <l>Что бог привел услышать! Грех тебе</l>
@@ -597,7 +597,7 @@
             <l part="I">Я выполнил отцовский долг.</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Дочь</speaker>
           <lg>
             <l part="F">Ох, душно!</l>
@@ -606,14 +606,14 @@
             <l part="I">Не жемчугом.</l>
           </lg>
         </sp>
-        <stage type="delivery">(Рвет с себя жемчуг.)</stage>
-        <sp who="#Melnik">
+        <stage>(Рвет с себя жемчуг.)</stage>
+        <sp who="#melnik">
           <speaker>Мельник</speaker>
           <lg>
             <l part="M">Опомнись.</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Дочь</speaker>
           <lg>
             <l part="F">Так бы я</l>
@@ -621,15 +621,15 @@
             <l>Проклятую разлучницу мою!</l>
           </lg>
         </sp>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Мельник</speaker>
           <lg>
             <l part="I">Ты бредишь, право, бредишь.</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Дочь</speaker>
-          <stage type="delivery">(сымает с себя повязку)</stage>
+          <stage>(сымает с себя повязку)</stage>
           <lg>
             <l part="F">Вот венец мой,</l>
             <l>Венец позорный! вот чем нас венчал</l>
@@ -637,15 +637,15 @@
             <l>Ото всего, чем прежде дорожила.</l>
             <l>Мы развенчались. — Сгинь ты, мой венец!</l>
           </lg>
-          <stage type="delivery">(Бросает повязку в Днепр.)</stage>
+          <stage>(Бросает повязку в Днепр.)</stage>
           <lg>
             <l part="I">Теперь все кончено.</l>
           </lg>
         </sp>
-        <stage type="delivery">(Бросается в реку.)</stage>
-        <sp who="#Melnik">
+        <stage>(Бросается в реку.)</stage>
+        <sp who="#melnik">
           <speaker>Старик</speaker>
-          <stage type="delivery">(падая)</stage>
+          <stage>(падая)</stage>
           <lg>
             <l part="F">Ох, горе, горе!</l>
           </lg>
@@ -654,7 +654,7 @@
       <div type="scene">
         <head>КНЯЖЕСКИЙ ТЕРЕМ</head>
         <stage>Свадьба. Молодые сидят за столом. Гости. Хор девушек.</stage>
-        <sp who="#Svat">
+        <sp who="#svat">
           <speaker>Сват</speaker>
           <lg>
             <l>Веселую мы свадебку сыграли.</l>
@@ -667,7 +667,7 @@
             <l>Аль горлышки от пенья пересохли?</l>
           </lg>
         </sp>
-        <sp who="#Hor">
+        <sp who="#hor">
           <speaker>Хор</speaker>
           <lg>
             <l>Сватушка, сватушка,</l>
@@ -687,15 +687,15 @@
             <l>К красным девушкам норовится.</l>
           </lg>
         </sp>
-        <sp who="#Svat">
+        <sp who="#svat">
           <speaker>Сват</speaker>
           <lg>
             <l>Насмешницы, уж выбрали вы песню!</l>
             <l>На, на, возьмите, не корите свата.</l>
           </lg>
         </sp>
-        <stage type="delivery">(Дарит девушек.)</stage>
-        <sp who="#OdinGolos">
+        <stage>(Дарит девушек.)</stage>
+        <sp who="#odin_golos">
           <speaker>Один голос</speaker>
           <lg>
             <l>По камушкам по желтому песочку</l>
@@ -708,7 +708,7 @@
             <l>Утопая, мила друга проклинала.</l>
           </lg>
         </sp>
-        <sp who="#Svat">
+        <sp who="#svat">
           <speaker>Сват</speaker>
           <lg>
             <l>Красавицы! да это что за песня?</l>
@@ -716,26 +716,26 @@
             <l part="I">Кто выбрал эту песню? а?</l>
           </lg>
         </sp>
-        <sp who="#Devushki">
+        <sp who="#devushki">
           <speaker>Девушки</speaker>
           <lg>
             <l part="F">Не я —</l>
             <l part="I">Не я — не мы...</l>
           </lg>
         </sp>
-        <sp who="#Svat">
+        <sp who="#svat">
           <speaker>Сват</speaker>
           <lg>
             <l part="F">Да кто ж пропел ее?</l>
           </lg>
         </sp>
         <stage>Шепот и смятение между девушками.</stage>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l part="I">Я знаю кто.</l>
           </lg>
-          <stage type="delivery">(Встает из-за стола и говорит тихо конюшему.)</stage>
+          <stage>(Встает из-за стола и говорит тихо конюшему.)</stage>
           <lg>
             <l part="F">Она сюда прокралась.</l>
             <l>Скорее выведи ее. Да сведай,</l>
@@ -743,9 +743,9 @@
           </lg>
         </sp>
         <stage>Конюший подходит к девушкам.</stage>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
-          <stage type="delivery">(садится, про себя)</stage>
+          <stage>(садится, про себя)</stage>
           <lg>
             <l part="F">Она, пожалуй,</l>
             <l>Готова здесь наделать столько шума,</l>
@@ -753,20 +753,20 @@
             <l part="I">И спрятаться.</l>
           </lg>
         </sp>
-        <sp who="#Konjushij">
+        <sp who="#konjushij">
           <speaker>Конюший</speaker>
           <lg>
             <l part="F">Я не нашел ее.</l>
           </lg>
         </sp>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l>Ищи. Она, я знаю, здесь. Она</l>
             <l part="I">Пропела эту песню.</l>
           </lg>
         </sp>
-        <sp who="#Gost">
+        <sp who="#gost">
           <speaker>Гость</speaker>
           <lg>
             <l part="F">Ай да мед!</l>
@@ -775,45 +775,45 @@
           </lg>
         </sp>
         <stage>Молодые целуются. Слышен слабый крик.</stage>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l part="I">Она! вот крик ее ревнивый.</l>
           </lg>
-          <stage type="delivery">(Конюшему.)</stage>
+          <stage>(Конюшему.)</stage>
           <lg>
             <l part="F">Что?</l>
           </lg>
         </sp>
-        <sp who="#Konjushij">
+        <sp who="#konjushij">
           <speaker>Конюший</speaker>
           <lg>
             <l part="I">Я не нашел ее нигде.</l>
           </lg>
         </sp>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l part="F">Дурак.</l>
           </lg>
         </sp>
-        <sp who="#Druzhko">
+        <sp who="#druzhko">
           <speaker>Дружко</speaker>
-          <stage type="delivery">(вставая)</stage>
+          <stage>(вставая)</stage>
           <lg>
             <l>Не время ль нам княгиню выдать мужу</l>
             <l>Да молодых в дверях осыпать хмелем?</l>
           </lg>
         </sp>
         <stage>Все встают.</stage>
-        <sp who="#Svaha">
+        <sp who="#svaha">
           <speaker>Сваха</speaker>
           <lg>
             <l>Вестимо, время. Дайте ж петуха.</l>
           </lg>
         </sp>
         <stage>Молодых кормят жареным петухом, потом осыпают хмелем — и ведутв спальню.</stage>
-        <sp who="#Svaha">
+        <sp who="#svaha">
           <speaker>Сваха</speaker>
           <lg>
             <l>Княгиня душенька, не плачь, не бойся,</l>
@@ -821,7 +821,7 @@
           </lg>
         </sp>
         <stage>Молодые уходят в спальню, гостивсе расходятся, кроме свахи и дружка.</stage>
-        <sp who="#Druzhko">
+        <sp who="#druzhko">
           <speaker>Дружко</speaker>
           <lg>
             <l part="F">Где чарочка? Всю ночь</l>
@@ -829,14 +829,14 @@
             <l>Так укрепиться мне вином не худо.</l>
           </lg>
         </sp>
-        <sp who="#Svaha">
+        <sp who="#svaha">
           <speaker>Сваха</speaker>
-          <stage type="delivery"> (наливает ему чарку)</stage>
+          <stage> (наливает ему чарку)</stage>
           <lg>
             <l part="I">На, кушай на здоровье.</l>
           </lg>
         </sp>
-        <sp who="#Druzhko">
+        <sp who="#druzhko">
           <speaker>Дружко</speaker>
           <lg>
             <l part="F">Ух! спасибо.</l>
@@ -844,27 +844,27 @@
             <l part="I">И свадьба хоть куда.</l>
           </lg>
         </sp>
-        <sp who="#Svaha">
+        <sp who="#svaha">
           <speaker>Сваха</speaker>
           <lg>
             <l part="F">Да, слава богу,</l>
             <l>Все хорошо, — одно не хорошо.</l>
           </lg>
         </sp>
-        <sp who="#Druzhko">
+        <sp who="#druzhko">
           <speaker>Дружко</speaker>
           <lg>
             <l part="I">А что?</l>
           </lg>
         </sp>
-        <sp who="#Svaha">
+        <sp who="#svaha">
           <speaker>Сваха</speaker>
           <lg>
             <l part="F">Да не к добру пропели песню</l>
             <l>Не свадебную, а бог весть какую.</l>
           </lg>
         </sp>
-        <sp who="#Druzhko">
+        <sp who="#druzhko">
           <speaker>Дружко</speaker>
           <lg>
             <l>Уж эти девушки — никак нельзя им</l>
@@ -874,8 +874,8 @@
             <l>Прощай, кума.</l>
           </lg>
         </sp>
-        <stage type="delivery">(Уходит.)</stage>
-        <sp who="#Svaha">
+        <stage>(Уходит.)</stage>
+        <sp who="#svaha">
           <speaker>Сваха</speaker>
           <lg>
             <l>Ох, сердце не на месте!</l>
@@ -886,7 +886,7 @@
       <div type="scene">
         <head>СВЕТЛИЦА</head>
         <stage>Княгиня и мамка.</stage>
-        <sp who="#Knjaginja">
+        <sp who="#knjaginja">
           <speaker>Княгиня</speaker>
           <lg>
             <l>Чу — кажется, трубят; нет, он не едет.</l>
@@ -902,7 +902,7 @@
             <l>По белому лицу меня потреплет.</l>
           </lg>
         </sp>
-        <sp who="#Mamka">
+        <sp who="#mamka">
           <speaker>Мамка</speaker>
           <lg>
             <l>Княгинюшка, мужчина что петух:</l>
@@ -918,14 +918,14 @@
             <l>Туда, сюда — а дома не сидится.</l>
           </lg>
         </sp>
-        <sp who="#Knjaginja">
+        <sp who="#knjaginja">
           <speaker>Княгиня</speaker>
           <lg>
             <l>Как думаешь? уж нет ли у него</l>
             <l part="I">Зазнобы тайной?</l>
           </lg>
         </sp>
-        <sp who="#Mamka">
+        <sp who="#mamka">
           <speaker>Мамка</speaker>
           <lg>
             <l part="F">Полно, не греши:</l>
@@ -936,7 +936,7 @@
             <l>Сокровища такого?</l>
           </lg>
         </sp>
-        <sp who="#Knjaginja">
+        <sp who="#knjaginja">
           <speaker>Княгиня</speaker>
           <lg>
             <l>Когда б услышал бог мои молитвы</l>
@@ -950,27 +950,27 @@
             <l part="I">Что князь, где он?</l>
           </lg>
         </sp>
-        <sp who="#Lovchij">
+        <sp who="#lovchij">
           <speaker>Ловчий</speaker>
           <lg>
             <l part="F">Князь приказал домой</l>
             <l part="I">Отъехать нам.</l>
           </lg>
         </sp>
-        <sp who="#Knjaginja">
+        <sp who="#knjaginja">
           <speaker>Княгиня</speaker>
           <lg>
             <l part="M">А где ж он сам?</l>
           </lg>
         </sp>
-        <sp who="#Lovchij">
+        <sp who="#lovchij">
           <speaker>Ловчий</speaker>
           <lg>
             <l part="F">Остался</l>
             <l>Один в лесу на берегу Днепра.</l>
           </lg>
         </sp>
-        <sp who="#Knjaginja">
+        <sp who="#knjaginja">
           <speaker>Княгиня</speaker>
           <lg>
             <l>И князя вы осмелились оставить</l>
@@ -986,7 +986,7 @@
             <l>Скорей зажги свечу перед иконой.</l>
           </lg>
         </sp>
-        <sp who="#Mamka">
+        <sp who="#mamka">
           <speaker>Мамка</speaker>
           <lg>
             <l>Бегу, мой свет, бегу...</l>
@@ -995,7 +995,7 @@
       </div>
       <div type="scene">
         <head>ДНЕПР. НОЧЬ</head>
-        <sp who="#Rusalki">
+        <sp who="#rusalki">
           <speaker>Русалки</speaker>
           <lg>
             <l rend="indent">Веселой толпою</l>
@@ -1012,14 +1012,14 @@
             <l>В нем сушить и отряхать.</l>
           </lg>
         </sp>
-        <sp who="#Odna">
+        <sp who="#odna">
           <speaker>Одна</speaker>
           <lg>
             <l>Тише, тише! под кустами</l>
             <l>Что-то кроется во мгле.</l>
           </lg>
         </sp>
-        <sp who="#Drugaja">
+        <sp who="#drugaja">
           <speaker>Другая</speaker>
           <lg>
             <l>Между месяцем и нами</l>
@@ -1027,7 +1027,7 @@
           </lg>
         </sp>
         <stage>Прячутся.</stage>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l>Знакомые, печальные места!</l>
@@ -1054,32 +1054,32 @@
           </lg>
         </sp>
         <stage>Входит старик, в лохмотьях и полунагой.</stage>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Старик</speaker>
           <lg>
             <l part="F">Здорово,</l>
             <l part="I">Здорово, зять.</l>
           </lg>
         </sp>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l part="M">Кто ты?</l>
           </lg>
         </sp>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Старик</speaker>
           <lg>
             <l part="F">Я здешний ворон.</l>
           </lg>
         </sp>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l part="I">Возможно ль? Это мельник.</l>
           </lg>
         </sp>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Старик</speaker>
           <lg>
             <l part="F">Что за мельник!</l>
@@ -1090,27 +1090,27 @@
             <l>Их рыбка-одноглазка стережет.</l>
           </lg>
         </sp>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l>Несчастный, он помешан. Мысли в нем</l>
             <l>Рассеяны, как тучи после бури.</l>
           </lg>
         </sp>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Старик</speaker>
           <lg>
             <l>Зачем вечор ты не приехал к нам?</l>
             <l>У нас был пир, тебя мы долго ждали.</l>
           </lg>
         </sp>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l part="I">Кто ждал меня?</l>
           </lg>
         </sp>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Старик</speaker>
           <lg>
             <l part="F">Кто ждал? вестимо, дочь.</l>
@@ -1120,13 +1120,13 @@
             <l part="I">Ни слова не скажу я.</l>
           </lg>
         </sp>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l part="F">Бедный мельник!</l>
           </lg>
         </sp>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Старик</speaker>
           <lg>
             <l>Какой я мельник, говорят тебе,</l>
@@ -1142,14 +1142,14 @@
             <l part="I">Сижу да каркаю.</l>
           </lg>
         </sp>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l part="F">Какая жалость!</l>
             <l part="I">Кто ж за тобою смотрит?</l>
           </lg>
         </sp>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Старик</speaker>
           <lg>
             <l part="F">Да, за мною</l>
@@ -1158,19 +1158,19 @@
             <l part="I">Русалочка.</l>
           </lg>
         </sp>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l part="M">Кто?</l>
           </lg>
         </sp>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Старик</speaker>
           <lg>
             <l part="M">Внучка.</l>
           </lg>
         </sp>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l part="F">Невозможно</l>
@@ -1180,7 +1180,7 @@
             <l part="I">Со мною жить?</l>
           </lg>
         </sp>
-        <sp who="#Melnik">
+        <sp who="#melnik">
           <speaker>Старик</speaker>
           <lg>
             <l part="F">В твой терем? нет! спасибо!</l>
@@ -1189,8 +1189,8 @@
             <l>И сыт, и волен. Не хочу в твой терем.</l>
           </lg>
         </sp>
-        <stage type="delivery">(Уходит.)</stage>
-        <sp who="#Knjaz">
+        <stage>(Уходит.)</stage>
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l>И этому все я виною! Страшно</l>
@@ -1207,26 +1207,26 @@
             <l>Раскаянья все муки растравил!</l>
           </lg>
         </sp>
-        <sp who="#Lovchij">
+        <sp who="#lovchij">
           <speaker>Ловчий</speaker>
           <lg>
             <l>Вот он. Насилу-то его сыскали!</l>
           </lg>
         </sp>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l part="I">Зачем вы здесь?</l>
           </lg>
         </sp>
-        <sp who="#Lovchij">
+        <sp who="#lovchij">
           <speaker>Ловчий</speaker>
           <lg>
             <l part="F">Княгиня нас послала.</l>
             <l part="I">Она боялась за тебя.</l>
           </lg>
         </sp>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l part="F">Несносна</l>
@@ -1234,9 +1234,9 @@
             <l>Что шагу мне ступить нельзя без няньки?</l>
           </lg>
         </sp>
-        <stage type="delivery">(Уходит.)</stage>
+        <stage>(Уходит.)</stage>
         <stage>Русалки показываются над водой.</stage>
-        <sp who="#Rusalki">
+        <sp who="#rusalki">
           <speaker>Русалки</speaker>
           <lg>
             <l>Что, сестрицы? в поле чистом</l>
@@ -1249,13 +1249,13 @@
             <l>Закатилася луна.</l>
           </lg>
         </sp>
-        <sp who="#Odna">
+        <sp who="#odna">
           <speaker>Одна</speaker>
           <lg>
             <l>Погодим еще, сестрица.</l>
           </lg>
         </sp>
-        <sp who="#Drugaja">
+        <sp who="#drugaja">
           <speaker>Другая</speaker>
           <lg>
             <l>Нет, пора, пора, пора.</l>
@@ -1269,7 +1269,7 @@
         <head>ДНЕПРОВСКОЕ ДНО</head>
         <stage>Терем русалок.</stage>
         <stage>Русалки прядут около своей царицы.</stage>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Старшая русалка</speaker>
           <lg>
             <l>Оставьте пряжу, сестры. Солнце село.</l>
@@ -1286,7 +1286,7 @@
             <l part="I">Где ты была?</l>
           </lg>
         </sp>
-        <sp who="#Rusalochka">
+        <sp who="#rusalochka">
           <speaker>Дочь</speaker>
           <lg>
             <l part="F">На землю выходила</l>
@@ -1300,7 +1300,7 @@
             <l part="I">Он очень был им рад.</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Русалка</speaker>
           <lg>
             <l part="F">Безумный скряга!</l>
@@ -1311,14 +1311,14 @@
             <l part="I">Он твой отец.</l>
           </lg>
         </sp>
-        <sp who="#Rusalochka">
+        <sp who="#rusalochka">
           <speaker>Дочь</speaker>
           <lg>
             <l part="F">Тот самый, что тебя</l>
             <l>Покинул и на женщине женился?</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Русалка</speaker>
           <lg>
             <l>Он сам; к нему нежнее приласкайся</l>
@@ -1330,18 +1330,18 @@
             <l>И жду к себе. Ты поняла меня?</l>
           </lg>
         </sp>
-        <sp who="#Rusalochka">
+        <sp who="#rusalochka">
           <speaker>Дочь</speaker>
           <lg>
             <l part="I">О, поняла.</l>
           </lg>
         </sp>
-        <sp who="#DochRusalka">
+        <sp who="#doch_rusalka">
           <speaker>Русалка</speaker>
           <lg>
             <l part="M">Ступай же.</l>
           </lg>
-          <stage type="delivery">(Одна.)</stage>
+          <stage>(Одна.)</stage>
           <lg>
             <l part="F">С той поры,</l>
             <l>Как бросилась без памяти я в воду</l>
@@ -1356,7 +1356,7 @@
       </div>
       <div type="scene">
         <head>БЕРЕГ</head>
-        <sp who="#Knjaz">
+        <sp who="#knjaz">
           <speaker>Князь</speaker>
           <lg>
             <l>Невольно к этим грустным берегам</l>

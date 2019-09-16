@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="../css/tei.css"?>
+<?xml-model href="https://dracor.org/schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> 
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="ru">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title type="main" xml:lang="ru">Лакейская</title>
         <title type="main" xml:lang="en">The Servants' Hall</title>
-        <title type="sub"/>
-        <author key="Wikidata:Q43718">Гоголь, Николай Васильевич</author>
+        <title type="sub" xml:lang="ru">–</title>
+        <title type="sub" xml:lang="en">–</title>
+        <author key="wikidata:Q43718">Гоголь, Николай Васильевич</author>
       </titleStmt>
       <publicationStmt>
-        <publisher xml:id="RusDraCor">RusDraCor</publisher>
-        <idno type="URL">https://dracor.org/rus/gogol-lakeiskaja</idno>
-        <idno type="RusDraCor">56</idno>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="dracor" xml:base="https://dracor.org/id/">rus000056</idno>
         <availability>
           <licence>
-            <ab>CC BY 4.0</ab>
-            <ref target="https://creativecommons.org/licenses/by/4.0/legalcode">Licence</ref>
+            <ab>CC0 1.0</ab>
+            <ref target="https://creativecommons.org/publicdomain/zero/1.0/">Licence</ref>
           </licence>
         </availability>
+        <idno type="wikidata" xml:base="https://www.wikidata.org/entity/">Q19178906</idno>
       </publicationStmt>
       <sourceDesc>
         <bibl type="digitalSource">
           <name>Интернет-библиотека Алексея Комарова</name>
           <idno type="URL">http://ilibrary.ru/text/1555/index.html</idno>
-          <availability>
-            <licence>
-              <ab>CC BY-SA 3.0</ab>
-              <ref target="https://creativecommons.org/licenses/by-sa/3.0/deed.ru">Licence</ref>
-            </licence>
+          <availability status="free">
+            <p>In the public domain.</p>
           </availability>
           <bibl type="originalSource">
             <title>Н. В. Гоголь. Собрание сочинений в 9 т. Т. 4 Повести. М.: Русская книга,
@@ -99,9 +98,9 @@
     </profileDesc>
     <revisionDesc>
       <listChange>
-        <change who="#ds">converted from source</change>
-        <change who="#to">gender</change>
-        <change who="#ff" when="2017-11-07">unify some IDs; formalities</change>
+        <change>(ds) convert from source</change>
+        <change>(to) gender</change>
+        <change when="2017-11-07">(ff) unify some IDs; formalities</change>
       </listChange>
     </revisionDesc>
   </teiHeader>
@@ -123,9 +122,9 @@
         </sp>
         <sp who="#Ivan">
           <speaker>Иван</speaker>
-          <stage type="delivery">(махнув рукой).</stage>
+          <stage>(махнув рукой).</stage>
           <p>Ну, уж я пойду, так и быть, отворю!</p>
-          <stage type="delivery">(Отворяя дверь, вскрикивает.)</stage>
+          <stage>(Отворяя дверь, вскрикивает.)</stage>
           <p>Это Андрюшка!</p>
         </sp>
         <stage>Чужой слуга входит в картузе, в шинели и с узелком в руке.</stage>
@@ -136,7 +135,7 @@
         <sp who="#ChuzhojSluga">
           <speaker>Чужой слуга.</speaker>
           <p>Ах ты, чухонский сын! Побегал бы ты с мое. Вот</p>
-          <stage type="delivery">(подымая узелок)</stage>
+          <stage>(подымая узелок)</stage>
           <p>к цветочнице велела снесть, что на Петербургской. Небось четвертака на извозчика не
             даст. Да и к вашему тож. Что, спит?</p>
         </sp>
@@ -268,7 +267,7 @@
         </sp>
         <sp who="#Barin">
           <speaker>Барин</speaker>
-          <stage type="delivery">(увидя чужого лакея).</stage>
+          <stage>(увидя чужого лакея).</stage>
           <p>Это что за человек?</p>
         </sp>
         <sp who="#Grigorij">
@@ -305,22 +304,22 @@
           <speaker>Барин.</speaker>
           <p>Хорошо. Петрушка, дай мне поскорей одеться: я иду со двора. А вы — не принимать никого!
             Слышишь, всем говорить, что меня нет дома!</p>
-          <stage type="delivery">(Уходит; за ним Петрушка.)</stage>
+          <stage>(Уходит; за ним Петрушка.)</stage>
         </sp>
       </div>
       <div type="scene">
         <head>III</head>
         <sp who="#ChuzhojSluga">
           <speaker>Чужой лакей</speaker>
-          <stage type="delivery">(Григорию).</stage>
+          <stage>(Григорию).</stage>
           <p>Ну видишь, ведь вот и досталось.</p>
         </sp>
         <sp who="#Grigorij">
           <speaker>Григорий</speaker>
-          <stage type="delivery">(махнув рукой).</stage>
+          <stage>(махнув рукой).</stage>
           <p>А! уж служба такая! как ни старайся — всё выбранят.</p>
           <p>Вот опять какой-то черт лезет.</p>
-          <stage type="delivery">(Ивану.)</stage>
+          <stage>(Ивану.)</stage>
           <p>Ступай отворяй, что ж ты зеваешь?</p>
         </sp>
         <stage>Иван отворяет дверь; входит господин в шубе.</stage>
@@ -354,7 +353,7 @@
         </sp>
         <sp who="#GospodinVShube">
           <speaker>Господин</speaker>
-          <stage type="delivery">(вразумительнее).</stage>
+          <stage>(вразумительнее).</stage>
           <p>Невелещагин.</p>
         </sp>
         <sp who="#Grigorij">
@@ -388,7 +387,7 @@
         <sp who="#Ivan">
           <speaker>Иван.</speaker>
           <p>Прощай!</p>
-          <stage type="delivery">(Идет отворять дверь.)</stage>
+          <stage>(Идет отворять дверь.)</stage>
         </sp>
       </div>
       <div type="scene">
@@ -397,30 +396,30 @@
         <sp who="#Grigorij">
           <speaker>Григорий.</speaker>
           <p>Куды, куды! удостойте взглядом!</p>
-          <stage type="delivery">(Хватает ее за полу платья.)</stage>
+          <stage>(Хватает ее за полу платья.)</stage>
         </sp>
         <sp who="#Devushka">
           <speaker>Девушка.</speaker>
           <p>Нельзя, нельзя, Григорий Павлович! не держите меня, совсем-с некогда.</p>
-          <stage type="delivery">(Вырывается и убегает в дверь на лестницу.)</stage>
+          <stage>(Вырывается и убегает в дверь на лестницу.)</stage>
         </sp>
         <sp who="#Grigorij">
           <speaker>Григорий</speaker>
-          <stage type="delivery">(смотря вслед ей).</stage>
+          <stage>(смотря вслед ей).</stage>
           <p>Вот она, как поплелась!</p>
-          <stage type="delivery">(Смеется.)</stage>
+          <stage>(Смеется.)</stage>
           <p>Хе, хе, хе!</p>
         </sp>
         <sp who="#Ivan">
           <speaker>Иван</speaker>
-          <stage type="delivery">(смеется).</stage>
+          <stage>(смеется).</stage>
           <p>Хи, хи, хи!</p>
         </sp>
         <stage>Выходит Барин. Рожи у Григория и Ивана вдруг становятся насупившись и сурьезны.
           Григорий снимает с вешалки шубу и накидывает барину на плечи. Барин уходит.</stage>
         <sp who="#Grigorij">
           <speaker>Григорий</speaker>
-          <stage type="delivery">(стоит среди комнаты, чистя пальцем в носу).</stage>
+          <stage>(стоит среди комнаты, чистя пальцем в носу).</stage>
           <p>Ведь вот свободное время. Барин ушел, чего бы, кажется, лучше, — нет, сейчас привалит
             этот черт, брюхач-дворецкий.</p>
           <stage>За сценой слышен крик дворецкого: «Ведь вот, точно, Божеское наказание: десять
@@ -432,7 +431,7 @@
         <head>VII</head>
         <sp who="#PuzatyjDvoretskij">
           <speaker>Пузатый дворецкий</speaker>
-          <stage type="delivery">(входит с сильными движениями и размахами рук).</stage>
+          <stage>(входит с сильными движениями и размахами рук).</stage>
           <p>Побоялись бы хоть совести своей, коли Бога не боитесь. Ведь ковры до сих пор не
             выколочены. Вы бы, Григорий Павлович, пример другим должны бы дать, а вы спите ровно от
             утра до вечера; ведь глаза-то у вас совсем заплыли от сна, ей-Богу! Ведь вы совсем
@@ -452,12 +451,12 @@
         </sp>
         <sp who="#Grigorij">
           <speaker>Григорий</speaker>
-          <stage type="delivery">(уходя).</stage>
+          <stage>(уходя).</stage>
           <p>Эх ты, житье, житье! вставши да за вытье!</p>
         </sp>
         <sp who="#PuzatyjDvoretskij">
           <speaker>Дворецкий</speaker>
-          <stage type="delivery">(оставшись один).</stage>
+          <stage>(оставшись один).</stage>
           <p>В том-то и есть поведенье, что всякий человек должен знать долг. Коли слуга, так слуга,
             дворянин, так дворянин, архиерей, так архиерей. А то бы, пожалуй, всякий зачал... я бы
             сейчас сказал: «Нет, я не дворецкий, а губернатор или там какой-нибудь от инфантерии».
@@ -484,7 +483,7 @@
         </sp>
         <sp who="#Annushka">
           <speaker>Аннушка</speaker>
-          <stage type="delivery">(севши).</stage>
+          <stage>(севши).</stage>
           <p>Скажите, ведь вы знаете что-нибудь о бале, который на днях затевается?</p>
         </sp>
         <sp who="#PuzatyjDvoretskij">
@@ -538,7 +537,7 @@
         </sp>
         <sp who="#PuzatyjDvoretskij">
           <speaker>Дворецкий</speaker>
-          <stage type="delivery">(с довольною улыбкою).</stage>
+          <stage>(с довольною улыбкою).</stage>
           <p>Не стоит благодарности, сударыня. Оно, конечно, не всякий человек имеет, примерно
             сказать, речь, то есть дар слова. Натурально, бывает иногда... что, как обыкновенно
             говорят, косноязычие... Да. Или иные прочие подобные случаи, что, впрочем, уже

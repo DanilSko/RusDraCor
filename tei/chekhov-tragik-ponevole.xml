@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="../css/tei.css"?>
+<?xml-model href="https://dracor.org/schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> 
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="ru">
   <teiHeader>
     <fileDesc>
@@ -8,28 +9,25 @@
         <title type="main" xml:lang="en">A Tragedian in Spite of Himself (A Holiday Episode)</title>
         <title type="sub" xml:lang="ru">Шутка в одном действии</title>
         <title type="sub" xml:lang="en">A Joke in One Act</title>
-        <author key="Wikidata:Q5685">Чехов, Антон Павлович</author>
+        <author key="wikidata:Q5685">Чехов, Антон Павлович</author>
       </titleStmt>
       <publicationStmt>
-        <publisher xml:id="RusDraCor">RusDraCor</publisher>
-        <idno type="URL">https://dracor.org/rus/chekhov-tragik-ponevole</idno>
-        <idno type="RusDraCor">61</idno>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="dracor" xml:base="https://dracor.org/id/">rus000061</idno>
         <availability>
           <licence>
-            <ab>CC BY 4.0</ab>
-            <ref target="https://creativecommons.org/licenses/by/4.0/legalcode">Licence</ref>
+            <ab>CC0 1.0</ab>
+            <ref target="https://creativecommons.org/publicdomain/zero/1.0/">Licence</ref>
           </licence>
         </availability>
+        <idno type="wikidata" xml:base="https://www.wikidata.org/entity/">Q4461754</idno>
       </publicationStmt>
       <sourceDesc>
         <bibl type="digitalSource">
           <name>Интернет-библиотека Алексея Комарова</name>
           <idno type="URL">http://ilibrary.ru/text/966/index.html</idno>
-          <availability>
-            <licence>
-              <ab>CC BY-SA 3.0</ab>
-              <ref target="https://creativecommons.org/licenses/by-sa/3.0/deed.ru">Licence</ref>
-            </licence>
+          <availability status="free">
+            <p>In the public domain.</p>
           </availability>
           <bibl type="originalSource">
             <title>А. П. Чехов. Полное собрание сочинений и писем в 30-ти томах. Сочинения. Том 12.
@@ -67,11 +65,11 @@
     </profileDesc>
     <revisionDesc>
       <listChange>
-        <change who="#ds" when="2017-03-31">converted from source</change>
-        <change who="#to" when="2017-05-22">looked through IDs just in case</change>
-        <change who="#to" when="2017-06-04">gender</change>
-        <change who="#ff" when="2017-07-08">revised</change>
-        <change who="#ff" when="2017-11-27">(DE|EN) transl. of character names in ISO 9</change>
+        <change when="2017-03-31">(ds) convert from source</change>
+        <change when="2017-05-22">(to) look through IDs just in case</change>
+        <change when="2017-06-04">(to) gender</change>
+        <change when="2017-07-08">(ff) revision</change>
+        <change when="2017-11-27">(ff) de+en transl. of character names in ISO 9</change>
       </listChange>
     </revisionDesc>
   </teiHeader>
@@ -102,7 +100,7 @@
         </sp>
         <sp who="#Tolkachov">
           <speaker>Толкачов</speaker>
-          <stage type="delivery">(тяжело дыша).</stage>
+          <stage>(тяжело дыша).</stage>
           <p>Голубчик, милый мой... У меня к тебе просьба... Умоляю... одолжи до завтрашнего дня
             револьвера. Будь другом!</p>
         </sp>
@@ -136,7 +134,7 @@
           <p>Какой я отец семейства? Я мученик! Я вьючная скотина, негр, раб, подлец, который все
             еще чего-то ждет и не отправляет себя на тот свет! Я тряпка, болван, идиот! Зачем я
             живу? Для чего?</p>
-          <stage type="delivery">(Вскакивает.)</stage>
+          <stage>(Вскакивает.)</stage>
           <p>Ну, ты скажи мне, для чего я живу? К чему этот непрерывный ряд нравственных и
             физических страданий? Я понимаю быть мучеником идеи, да! но быть мучеником черт знает
             чего, дамских юбок да ламповых шаров, нет!– слуга покорный! Нет, нет, нет! Довольно с
@@ -177,7 +175,7 @@
             требует, чтобы я заехал к модистке и выбранил ее за то, что лиф вышел широк, а в плечах
             узко; Соничке нужно переменить башмаки, свояченице пунцового шелку по образчику на
             двадцать копеек и три аршина тесьмы... Да вот, постой, я тебе сейчас прочту.</p>
-          <stage type="delivery">(Вынимает из кармана записочку и читает.)</stage>
+          <stage>(Вынимает из кармана записочку и читает.)</stage>
           <p>Шар для лампы; 1 фунт ветчинной колбасы; гвоздики и корицы на 5 коп.; касторового масла
             для Миши; 10 фунтов сахарного песку; взять из дому медный таз и ступку для сахара;
             карболовой кислоты, персидского порошку, пудры на 10 коп.; 20 бутылок пива; уксусной
@@ -218,9 +216,9 @@
             Все так хорошо, поэтично: и тепло, понимаешь ли, и ребята за стеной не визжат, и супруги
             нет, и совесть чиста – лучше и не надо. Засыпаешь ты – и вдруг... и вдруг слышишь:
             дзз!.. Комары!</p>
-          <stage type="delivery">(Вскакивает.)</stage>
+          <stage>(Вскакивает.)</stage>
           <p>Комары, будь они трижды, анафемы, прокляты, комары!</p>
-          <stage type="delivery">(Потрясает кулаками.)</stage>
+          <stage>(Потрясает кулаками.)</stage>
           <p>Комары! Это казнь египетская, инквизиция! Дзз!.. Дзюзюкает этак жалобно, печально,
             точно прощения просит, но так тебя, подлец, укусит, что потом целый час чешешься. Ты и
             куришь, и бьешь их, и с головой укрываешься – нет спасения! В конце концов плюнешь и
@@ -228,7 +226,7 @@
             казнь египетская: в зале супруга начинает со своими тенорами романсы разучивать. Днем
             спят, а по ночам к любительским концертам готовятся. О, боже мой! Тенора – это такое
             мучение, что никакие комары не сравнятся.</p>
-          <stage type="delivery">(Поет.)</stage>
+          <stage>(Поет.)</stage>
           <p>«Не говори, что молодость сгубила...» «Я вновь пред тобою стою очарован...» О,
             по-одлые! Всю душу мою вытянули! Чтоб их хоть немножко заглушить, я на такой фокус
             пускаюсь: стучу себе пальцем по виску около уха. Этак стучу часов до четырех, пока не
@@ -238,7 +236,7 @@
             тебе, преподлая, и врагу такой жизни не пожелаю. Понимаешь – заболел! Одышка, изжога,
             вечно чего-то боюсь, желудок не варит, в глазах мутно... Веришь ли, психопатом
             стал...</p>
-          <stage type="delivery">(Оглядывается.)</stage>
+          <stage>(Оглядывается.)</stage>
           <p>Только это между нами... Хочу сходить к Чечотту или к Мержеевскому. Находит на меня,
             братец, какая-то чертовщина. Этак в минуты досады и обалдения, когда комары кусают или
             тенора поют, вдруг в глазах помутится, вдруг вскочишь, бегаешь, как угорелый, по всему
@@ -267,7 +265,7 @@
         </sp>
         <sp who="#Murashkin">
           <speaker>Мурашкин</speaker>
-          <stage type="delivery">(радостно).</stage>
+          <stage>(радостно).</stage>
           <p>Неужели? Послушай, ты не знаешь ли там дачницу Ольгу Павловну Финберг?</p>
         </sp>
         <sp who="#Tolkachov">
@@ -309,10 +307,10 @@
         </sp>
         <sp who="#Tolkachov">
           <speaker>Толкачов</speaker>
-          <stage type="delivery">(топая ногами).</stage>
+          <stage>(топая ногами).</stage>
           <p>Давай сюда машинку! Где клетка? Садись сам верхом! Ешь человека! Терзай! Добивай
             его!</p>
-          <stage type="delivery">(Сжимая кулаки.)</stage>
+          <stage>(Сжимая кулаки.)</stage>
           <p>Крови жажду! Крови! Крови!</p>
         </sp>
         <sp who="#Murashkin">
@@ -321,19 +319,19 @@
         </sp>
         <sp who="#Tolkachov">
           <speaker>Толкачов</speaker>
-          <stage type="delivery">(наступая на него).</stage>
+          <stage>(наступая на него).</stage>
           <p>Крови жажду! Крови!</p>
         </sp>
         <sp who="#Murashkin">
           <speaker>Мурашкин</speaker>
-          <stage type="delivery">(в ужасе).</stage>
+          <stage>(в ужасе).</stage>
           <p>Он с ума сошел!</p>
-          <stage type="delivery">(Кричит.)</stage>
+          <stage>(Кричит.)</stage>
           <p>Петрушка! Марья! Где вы? Люди, спасите!</p>
         </sp>
         <sp who="#Tolkachov">
           <speaker>Толкачов</speaker>
-          <stage type="delivery">(гоняясь за ним по комнате).</stage>
+          <stage>(гоняясь за ним по комнате).</stage>
           <p>Крови жажду! Крови!</p>
         </sp>
         <stage>Занавес</stage>

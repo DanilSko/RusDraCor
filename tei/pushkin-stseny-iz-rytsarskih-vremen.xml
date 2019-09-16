@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="../css/tei.css"?>
+<?xml-model href="https://dracor.org/schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> 
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="ru">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title type="main" xml:lang="ru">Сцены из рыцарских времен</title>
         <title type="main" xml:lang="en">Scenes from Knightly Times</title>
-        <title type="sub"/>
-        <author key="Wikidata:Q7200">Пушкин, Александр Сергеевич</author>
+        <title type="sub" xml:lang="ru">–</title>
+        <title type="sub" xml:lang="en">–</title>
+        <author key="wikidata:Q7200">Пушкин, Александр Сергеевич</author>
       </titleStmt>
       <publicationStmt>
-        <publisher xml:id="RusDraCor">RusDraCor</publisher>
-        <idno type="URL">https://dracor.org/rus/pushkin-stseny-iz-rytsarskih-vremen</idno>
-        <idno type="RusDraCor">16</idno>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="dracor" xml:base="https://dracor.org/id/">rus000016</idno>
         <availability>
           <licence>
-            <ab>CC BY 4.0</ab>
-            <ref target="https://creativecommons.org/licenses/by/4.0/legalcode">Licence</ref>
+            <ab>CC0 1.0</ab>
+            <ref target="https://creativecommons.org/publicdomain/zero/1.0/">Licence</ref>
           </licence>
         </availability>
+        <idno type="wikidata" xml:base="https://www.wikidata.org/entity/">Q19223156</idno>
       </publicationStmt>
       <sourceDesc>
         <bibl type="digitalSource">
           <name>Интернет-библиотека Алексея Комарова</name>
           <idno type="URL">http://ilibrary.ru/text/471/index.html</idno>
-          <availability>
-            <licence>
-              <ab>CC BY-SA 3.0</ab>
-              <ref target="https://creativecommons.org/licenses/by-sa/3.0/deed.ru">Licence</ref>
-            </licence>
+          <availability status="free">
+            <p>In the public domain.</p>
           </availability>
           <bibl type="originalSource">
             <title>А.С. Пушкин. Собрание сочинений в 10 томах. Том 4. Государственное издательство
@@ -68,15 +67,15 @@
           <person xml:id="Karl" sex="MALE">
             <persName>Карл</persName>
           </person>
-          <person xml:id="Kosari" sex="MALE">
-            <persName>Косари</persName>
-          </person>
-          <person xml:id="Rytsari" sex="MALE">
-            <persName>Рыцари</persName>
-          </person>
-          <person xml:id="Vassaly" sex="MALE">
-            <persName>Вассалы</persName>
-          </person>
+          <personGrp xml:id="Kosari" sex="MALE">
+            <name>Косари</name>
+          </personGrp>
+          <personGrp xml:id="Rytsari" sex="MALE">
+            <name>Рыцари</name>
+          </personGrp>
+          <personGrp xml:id="Vassaly" sex="MALE">
+            <name>Вассалы</name>
+          </personGrp>
           <person xml:id="OdinRytsar" sex="MALE">
             <persName>Один рыцарь</persName>
           </person>
@@ -123,12 +122,12 @@
     </profileDesc>
     <revisionDesc>
       <listChange>
-        <change who="#ds" when="2017-05-23">converted from source</change>
-        <change who="#ff" when="2017-05-23">added metadata, inserted configuration changes</change>
-        <change who="#zhenya" when="2017-06-01">added dates, ids</change>
-        <change who="#GG" when="2017-06-03">gender info</change>
-        <change who="#ff" when="2017-12-03">formalities; delete duplicate of poem; work on
-          IDs</change>
+        <change when="2017-05-23">(ds) convert from source</change>
+        <change when="2017-05-23">(ff) add metadata, insert configuration changes</change>
+        <change when="2017-06-01">(zh) add dates, ids</change>
+        <change when="2017-06-03">(gg) gender info</change>
+        <change when="2017-12-03">(ff) formalities; delete duplicate of poem; work on IDs</change>
+        <change when="2018-04-07">(zh) group tag</change>
       </listChange>
     </revisionDesc>
   </teiHeader>
@@ -390,10 +389,10 @@
         </sp>
         <sp who="#Bertold">
           <speaker>Бертольд.</speaker>
-          <p>Perpetuum mobile, то есть </p>
-          <p>. Если найду вечное движение, то я не вижу границ творчеству человеческому... видишь
-            ли, добрый мой Мартын: делать золото задача заманчивая, открытие, может быть, любопытное
-            – но найти perpetuum mobile... о!..</p>
+          <p>Perpetuum mobile, то есть <emph>вечное движение</emph>. Если найду вечное движение, то
+            я не вижу границ творчеству человеческому... видишь ли, добрый мой Мартын: делать золото
+            задача заманчивая, открытие, может быть, любопытное – но найти perpetuum mobile...
+            о!..</p>
         </sp>
         <sp who="#Martyn">
           <speaker>Мартын.</speaker>
@@ -423,14 +422,14 @@
             дешевле нигде не найдете». – Врешь ты, жид.– «Никак нет, честию вас уверяю»... Честию!..
             Хороша честь! А рыцарь – он волен как сокол... он никогда не горбился над счетами, он
             идет прямо и гордо, он скажет слово, ему верят...</p>
-          <p> Да разве это жизнь? – Черт ее побери! – Пойду лучше в минстрели.</p>
-          <p> Однако что это сказал монах? Турнир в * и туда едет барон – ах, боже мой! там будет и
+          <p>Да разве это жизнь? – Черт ее побери! – Пойду лучше в минстрели.</p>
+          <p>Однако что это сказал монах? Турнир в * и туда едет барон – ах, боже мой! там будет и
             Клотильда. Дамы обсядут кругом, трепеща за своих рыцарей – трубы затрубят – выступят
             герольды – рыцари объедут поле, преклоняя копья перед балконом своих красавиц... – трубы
             опять затрубят – рыцари разъедутся – помчатся друг на друга... дамы ахнут... боже мой! и
             никогда не подыму я пыли на турнире, никогда герольды не возгласят моего имени,
             презренного мещанского имени, никогда Клотильда не ахнет...</p>
-          <p> Деньги! кабы знал он, как рыцари презирают нас, несмотря на наши деньги...</p>
+          <p>Деньги! кабы знал он, как рыцари презирают нас, несмотря на наши деньги...</p>
         </sp>
         <sp who="#Alber">
           <speaker>Альбер.</speaker>
@@ -482,8 +481,8 @@
         </sp>
         <sp who="#Frants">
           <speaker>Франц</speaker>
-          <stage type="delivery">(почесывается)</stage>
-          <p>. Вашим конюшим?</p>
+          <stage>(почесывается).</stage>
+          <p>Вашим конюшим?</p>
         </sp>
         <sp who="#Alber">
           <speaker>Альбер.</speaker>
@@ -638,8 +637,8 @@
         <sp who="#Klotilda">
           <speaker>Клотильда.</speaker>
           <p>Граф, я рада, что имею честь принимать вас у себя... Братец, я буду вас ожидать в
-            северной башне... </p>
-          <stage type="delivery">(Уходит.)</stage>
+            северной башне...</p>
+          <stage>(Уходит.)</stage>
         </sp>
         <sp who="#Rotenfeld">
           <speaker>Граф.</speaker>
@@ -648,9 +647,9 @@
         <sp who="#Alber">
           <speaker>Альбер.</speaker>
           <p>Она предобрая девушка. Граф, что же вы не раздеваетесь? Где ваши слуги? Франц! разуй
-            графа. </p>
+            графа.</p>
           <stage>Франц медлит.</stage>
-          <p> Франц, разве ты глух?</p>
+          <p>Франц, разве ты глух?</p>
         </sp>
         <sp who="#Frants">
           <speaker>Франц.</speaker>
@@ -662,9 +661,9 @@
         </sp>
         <sp who="#Alber">
           <speaker>Альбер.</speaker>
-          <p>Грубиян! </p>
-          <stage type="delivery">(Замахивается.)</stage>
-          <p> Я тебя прогоню!</p>
+          <p>Грубиян!</p>
+          <stage>(Замахивается.)</stage>
+          <p>Я тебя прогоню!</p>
         </sp>
         <sp who="#Frants">
           <speaker>Франц.</speaker>
@@ -672,9 +671,9 @@
         </sp>
         <sp who="#Alber">
           <speaker>Альбер.</speaker>
-          <p>Мужик, подлая тварь! Извините, граф, я с ним управлюсь... Вон!... </p>
-          <stage type="delivery">(Толкает его в спину.)</stage>
-          <p> Чтобы духа твоего здесь не было.</p>
+          <p>Мужик, подлая тварь! Извините, граф, я с ним управлюсь... Вон!...</p>
+          <stage>(Толкает его в спину.)</stage>
+          <p>Чтобы духа твоего здесь не было.</p>
         </sp>
         <sp who="#Rotenfeld">
           <speaker>Граф.</speaker>
@@ -736,16 +735,16 @@
             кончилось? – боже... кровь кидается в лицо – кулаки мои сжимаются... О, я им отомщу,
             отомщу...</p>
           <p>Как-то примет меня отец!</p>
-          <stage type="delivery">(Стучится.)</stage>
+          <stage>(Стучится.)</stage>
         </sp>
       </div>
       <div type="configuration">
         <sp who="#Karl">
           <speaker>Карл</speaker>
-          <stage type="delivery">(выходит)</stage>
-          <p>. Кто там так бодро стучится? – A! Франц, это ты! </p>
-          <stage type="delivery">(Про себя.)</stage>
-          <p> Вот черт принес!</p>
+          <stage>(выходит).</stage>
+          <p>Кто там так бодро стучится? – A! Франц, это ты!</p>
+          <stage>(Про себя.)</stage>
+          <p>Вот черт принес!</p>
         </sp>
         <sp who="#Frants">
           <speaker>Франц.</speaker>
@@ -825,9 +824,9 @@
         </sp>
         <sp who="#Karl">
           <speaker>Карл.</speaker>
-          <p>Прощай, бог тебе помоги. </p>
+          <p>Прощай, бог тебе помоги.</p>
           <stage>Франц уходит.</stage>
-          <p> А какой он добрый малый, – и как жаль, что он такой беспутный! – Ну, теперь я
+          <p>А какой он добрый малый, – и как жаль, что он такой беспутный! – Ну, теперь я
             совершенно покоен: у меня не будет ни тяжбы, ни хлопот.</p>
         </sp>
       </div>
@@ -842,7 +841,7 @@
         <stage>Франц с частью вассалов скрывается за лес.</stage>
         <sp who="#Kosari">
           <speaker>Косари</speaker>
-          <stage type="delivery">(поют)</stage>
+          <stage>(поют)</stage>
           <lg>
             <l>Ходит во́ поле коса,</l>
             <l>Зелена́я полоса</l>
@@ -874,13 +873,13 @@
         <stage>Лошади раненые падают с седоками, другие бесятся.</stage>
         <sp who="#Frants">
           <speaker>Франц</speaker>
-          <stage type="delivery">(бросается из засады)</stage>
-          <p>. Вперед, ребята! У! у!..</p>
+          <stage>(бросается из засады).</stage>
+          <p>Вперед, ребята! У! у!..</p>
         </sp>
         <sp who="#OdinRytsar">
           <speaker>Один рыцарь</speaker>
-          <stage type="delivery">(другому)</stage>
-          <p>. Плохо, брат, – их более ста человек...</p>
+          <stage>(другому).</stage>
+          <p>Плохо, брат, – их более ста человек...</p>
         </sp>
         <sp who="#DrugojRytsar">
           <speaker>Другой.</speaker>
@@ -897,8 +896,8 @@
         <stage>Сражение. Все рыцари падают один за другим.</stage>
         <sp who="#Vassaly">
           <speaker>Вассалы</speaker>
-          <stage type="delivery">(бьют их дубинами, косами)</stage>
-          <p>. Наша взяла!.. Кровопийцы! разбойники! гордецы поганые! Теперь вы в наших руках...</p>
+          <stage>(бьют их дубинами, косами).</stage>
+          <p>Наша взяла!.. Кровопийцы! разбойники! гордецы поганые! Теперь вы в наших руках...</p>
         </sp>
         <sp who="#Frants">
           <speaker>Франц.</speaker>
@@ -922,8 +921,8 @@
         <stage>Наехавшие рыцари нападают на вассалов.</stage>
         <sp who="#Vassaly">
           <speaker>Вассалы.</speaker>
-          <p>Беда! Беда! Это рыцари!.. </p>
-          <stage type="delivery">(Разбегаются.)</stage>
+          <p>Беда! Беда! Это рыцари!..</p>
+          <stage>(Разбегаются.)</stage>
         </sp>
         <sp who="#Frants">
           <speaker>Франц.</speaker>
@@ -946,9 +945,9 @@
         </sp>
         <sp who="#Alber">
           <speaker>Альбер.</speaker>
-          <p>Благодаря железным латам... </p>
+          <p>Благодаря железным латам...</p>
           <stage>Все смеются.</stage>
-          <p> Ага, Франц, это ты, дружок? Очень рад, что встречаю тебя... Господа рыцари! благодарим
+          <p>Ага, Франц, это ты, дружок? Очень рад, что встречаю тебя... Господа рыцари! благодарим
             за великодушную помощь.</p>
         </sp>
         <sp who="#OdinIzRytsarej">
@@ -972,9 +971,9 @@
         <sp who="#OdinIzRytsarej">
           <speaker>Рыцарь.</speaker>
           <p>С удовольствием. – Но у вас нет лошадей, – позвольте предложить вам наших... мы сядем
-            за вами, как освобожденные красавицы. </p>
+            за вами, как освобожденные красавицы.</p>
           <stage>Садятся.</stage>
-          <p> А этого молодца, так и быть, довезем уж до первой виселицы... Господа, помогите его
+          <p>А этого молодца, так и быть, довезем уж до первой виселицы... Господа, помогите его
             привязать к репице моей лошади...</p>
         </sp>
       </div>
@@ -1001,8 +1000,8 @@
         </sp>
         <sp who="#Klotilda">
           <speaker>Клотильда.</speaker>
-          <p>Благодарю вас, рыцари. За здоровье ваших дам... </p>
-          <stage type="delivery">(Пьет.)</stage>
+          <p>Благодарю вас, рыцари. За здоровье ваших дам...</p>
+          <stage>(Пьет.)</stage>
         </sp>
         <sp who="#Rotenfeld">
           <speaker>Ротенфельд.</speaker>
@@ -1068,7 +1067,7 @@
         </sp>
         <sp who="#Frants">
           <speaker>Франц</speaker>
-          <stage type="delivery">(поет)</stage>
+          <stage>(поет)</stage>
           <lg>
             <l>Жил на свете рыцарь бедный,</l>
             <l>Молчаливый и простой,</l>
@@ -1187,8 +1186,8 @@
         </sp>
         <sp who="#Frants">
           <speaker>Франц</speaker>
-          <stage type="delivery">(в чрезвычайном смущении)</stage>
-          <p>. Сударыня... Сударыня...</p>
+          <stage>(в чрезвычайном смущении).</stage>
+          <p>Сударыня... Сударыня...</p>
         </sp>
         <sp who="#Rytsar_2">
           <speaker>Рыцарь.</speaker>
